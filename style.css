@@ -1,0 +1,4296 @@
+/**
+*
+* Testing
+*
+**/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 120px;
+  float: left;
+  padding: 12px 80px;
+}
+
+nav {
+  background-color: #fff;
+  border-bottom: 1px solid #E6E0D8;
+}
+
+nav:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav ul {
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  list-style: none;
+  margin-right: 90px;
+  position: relative;
+}
+
+nav ul li {
+  float: left;
+  display: inline-block;
+  background-color: #fff;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 1rem;
+  padding: 8px 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul li a {
+    font-size: 1.4rem;
+  }
+}
+
+nav ul li a:hover {
+  color: #305A6B;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  background-color: white;
+  width: 400px;
+  visibility: hidden;
+  -webkit-transition: top .3s;
+  transition: top .3s;
+}
+
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+
+nav ul ul li a {
+  position: relative;
+  margin: 0px;
+  float: none;
+  z-index: 999;
+}
+
+.show, .icon, input {
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  nav {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+  }
+  nav ul {
+    margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+  nav .logo {
+    padding-left: 20px;
+  }
+  nav ul li, nav ul ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 80%;
+  }
+  nav ul li {
+    margin: 0 auto;
+  }
+  nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .show {
+    display: block;
+    color: black;
+    font-size: 1rem;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: 1024px) and (min-width: 768px) and (max-width: 1024px) {
+  .show {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  ul {
+    width: 100%;
+    text-align: center;
+  }
+  .show:hover {
+    color: #305A6B;
+  }
+  nav ul ul ul {
+    position: static;
+    text-align: center;
+    width: 50%;
+  }
+  nav ul ul {
+    width: 100%;
+  }
+  nav ul ul a {
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+  .icon {
+    display: block;
+    position: absolute;
+    color: black;
+    right: 40px;
+    padding-left: 200px;
+    line-height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: 1024px) and (min-width: 768px) and (max-width: 1024px) {
+  .icon {
+    font-size: 40px;
+    padding-left: 500px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  nav ul li a:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .show + a, ul {
+    display: none;
+  }
+  [id^=btn]:checked + ul {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+#main {
+  background-image: url(/images/renovation.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+@media (min-width: 1026px) {
+  #main {
+    height: 460px;
+  }
+}
+
+#main h1 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 800;
+  width: 90%;
+  padding-top: 20%;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #main h1 {
+    font-size: 3rem;
+    padding-top: 8%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main h1 {
+    padding-top: 10%;
+    font-size: 2.5rem;
+  }
+}
+
+#main h3 {
+  position: relative;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 25px 40px;
+  color: white;
+  padding-bottom: 20%;
+}
+
+@media (min-width: 1026px) {
+  #main h3 {
+    font-size: 1rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main h3 {
+    padding-bottom: 10%;
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+#ourservices {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: 12%;
+  padding-bottom: 12%;
+}
+
+@media (min-width: 1026px) {
+  #ourservices {
+    margin-top: -20px;
+    padding-bottom: 4%;
+    padding-top: 4%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices {
+    padding-top: 8%;
+  }
+}
+
+#ourservices h1 {
+  font-size: 1.5rem;
+  padding-top: 2%;
+}
+
+@media (min-width: 1026px) {
+  #ourservices h1 {
+    font-size: 2.2rem;
+    padding-top: .5%;
+    padding-bottom: .5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices h1 {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 2rem;
+  }
+}
+
+#ourservices #service1 {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 8%;
+}
+
+@media (min-width: 1026px) {
+  #ourservices #service1 {
+    display: inline-block;
+    float: left;
+    width: 26%;
+    padding-left: 9%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices #service1 {
+    padding-bottom: 5%;
+  }
+}
+
+#ourservices #service2 {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 8%;
+}
+
+@media (min-width: 1026px) {
+  #ourservices #service2 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 26%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices #service2 {
+    padding-bottom: 5%;
+  }
+}
+
+#ourservices #service3 {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #ourservices #service3 {
+    display: inline-block;
+    float: right;
+    width: 26%;
+    padding-right: 9%;
+  }
+}
+
+#ourservices h2 {
+  font-size: 1.2rem;
+  padding-top: 8%;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 1026px) {
+  #ourservices h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices h2 {
+    font-size: 1.5rem;
+    padding-top: 5%;
+  }
+}
+
+#ourservices h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #ourservices h4 {
+    width: 65%;
+    padding-bottom: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices h4 {
+    width: 70%;
+    font-size: 1.2rem;
+  }
+}
+
+#ourservices .learnmore {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #305A6B;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #ourservices .learnmore {
+    padding: 12px 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourservices .learnmore {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#history {
+  background-color: #E6E0D8;
+  padding-top: 12%;
+  padding-bottom: 10%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+}
+
+@media (min-width: 1026px) {
+  #history {
+    display: block;
+    min-height: 300px;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #history {
+    padding-top: 8%;
+  }
+}
+
+#history h1 {
+  font-size: 1.5rem;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #history h1 {
+    display: inline-block;
+    float: left;
+    font-size: 2.2rem;
+    text-align: left;
+    clear: both;
+    padding-left: 10%;
+    padding-bottom: 1%;
+    padding-top: .5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #history h1 {
+    padding-top: 0;
+    font-size: 2rem;
+    padding-bottom: 3%;
+  }
+}
+
+#history h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 8%;
+}
+
+@media (min-width: 1026px) {
+  #history h3 {
+    display: inline-block;
+    position: relative;
+    float: left;
+    text-align: left;
+    width: 30%;
+    clear: both;
+    padding-left: 10%;
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #history h3 {
+    padding-bottom: 5%;
+    font-size: 1.2rem;
+  }
+}
+
+#history a {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #FBB040;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #history a {
+    text-align: left;
+    position: relative;
+    float: left;
+    margin-left: 10%;
+    padding: 14px 30px;
+    clear: both;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #history a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#history img {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1026px) {
+  #history img {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: 35%;
+    padding-top: 1px;
+    margin-right: -5%;
+  }
+}
+
+#main-about {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/images/meeting.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #main-about {
+    height: 500px;
+    min-height: 200px;
+  }
+}
+
+#main-about h3 {
+  font-weight: 300;
+  padding-top: 12%;
+  padding-bottom: 1%;
+  font-size: .9rem;
+}
+
+@media (min-width: 1026px) {
+  #main-about h3 {
+    font-size: 1rem;
+    padding-top: 10%;
+    padding-bottom: .5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main-about h3 {
+    font-size: 1.1rem;
+  }
+}
+
+#main-about h1 {
+  font-weight: 800;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #main-about h1 {
+    font-size: 3rem;
+    padding-bottom: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main-about h1 {
+    padding-bottom: 2%;
+    font-size: 2.5rem;
+  }
+}
+
+#main-about h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  padding-bottom: 20%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #main-about h2 {
+    width: 55%;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main-about h2 {
+    padding-top: 0;
+    font-size: 1.2rem;
+  }
+}
+
+#boxes {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #E6E0D8;
+  width: 100%;
+  color: white;
+  font-size: 0;
+  margin: 0 auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #boxes {
+    display: inline-block;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 20%;
+  }
+}
+
+#boxes #box1 {
+  background-color: #828280;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box1 {
+    display: inline-block;
+    width: 26%;
+    height: 15%;
+    vertical-align: top;
+  }
+}
+
+#boxes #box1 h2 {
+  font-size: 1.5rem;
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box1 h2 {
+    padding-top: 10%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #boxes #box1 h2 {
+    font-size: 1.5rem;
+  }
+}
+
+#boxes #box1 h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 3% 10%;
+  padding-bottom: 8%;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box1 h3 {
+    margin: 0 auto;
+    width: 70%;
+    font-size: .9rem;
+    padding-bottom: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #boxes #box1 h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#boxes #box2 {
+  background-color: #FBB040;
+  margin-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box2 {
+    display: inline-block;
+    width: 26%;
+    height: 15%;
+    vertical-align: top;
+  }
+}
+
+#boxes #box2 h2 {
+  font-size: 1.5rem;
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box2 h2 {
+    padding-top: 10%;
+    font-size: 1.5rem;
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #boxes #box2 h2 {
+    font-size: 1.5rem;
+  }
+}
+
+#boxes #box2 h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 3% 10%;
+  padding-bottom: 8%;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box2 h3 {
+    margin: 0 auto;
+    width: 70%;
+    font-size: .9rem;
+    padding-bottom: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #boxes #box2 h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#boxes #box3 {
+  background-color: #305A6B;
+  margin-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box3 {
+    display: inline-block;
+    width: 26%;
+    height: 15%;
+    vertical-align: top;
+  }
+}
+
+#boxes #box3 h2 {
+  font-size: 1.5rem;
+  padding-top: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box3 h2 {
+    padding-top: 10%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #boxes #box3 h2 {
+    font-size: 1.5rem;
+  }
+}
+
+#boxes #box3 h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 3% 10%;
+  padding-bottom: 8%;
+}
+
+@media (min-width: 1026px) {
+  #boxes #box3 h3 {
+    margin: 0 auto;
+    width: 70%;
+    font-size: .9rem;
+    padding-bottom: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #boxes #box3 h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#aboutinfo {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #305A6B;
+  color: white;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #aboutinfo {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #aboutinfo {
+    padding-top: 10%;
+  }
+}
+
+#aboutinfo h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #aboutinfo h2 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 75%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #aboutinfo h2 {
+    font-size: 1.2rem;
+    padding-top: 0;
+  }
+}
+
+#ourteam {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #ourteam {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    vertical-align: top;
+  }
+}
+
+#ourteam h2 {
+  padding-top: 2%;
+}
+
+@media (min-width: 1026px) {
+  #ourteam h2 {
+    font-size: 2.2rem;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam h2 {
+    font-size: 2.5rem;
+    padding-top: 0;
+  }
+}
+
+#ourteam #profiles {
+  vertical-align: bottom;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #ian {
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+  }
+}
+
+#ourteam #profiles #ian img {
+  width: 50%;
+  padding-top: 5%;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #ian img {
+    width: 70%;
+  }
+}
+
+#ourteam #profiles #ian h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -20px;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #ian h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #ian h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#ourteam #profiles #ian h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #ian h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #ian h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #kelsey {
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+  }
+}
+
+#ourteam #profiles #kelsey img {
+  width: 50%;
+  padding-top: 5%;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #kelsey img {
+    width: 70%;
+  }
+}
+
+#ourteam #profiles #kelsey h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -20px;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #kelsey h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #kelsey h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#ourteam #profiles #kelsey h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #kelsey h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #kelsey h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #trey {
+    display: inline-block;
+    width: 24%;
+  }
+}
+
+#ourteam #profiles #trey img {
+  width: 50%;
+  padding-top: 5%;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #trey img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #trey img {
+    font-size: 1.2rem;
+  }
+}
+
+#ourteam #profiles #trey h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -20px;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #trey h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #trey h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#ourteam #profiles #trey h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #trey h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #trey h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #tyler {
+    display: inline-block;
+    width: 24%;
+  }
+}
+
+#ourteam #profiles #tyler img {
+  width: 50%;
+  padding-top: 5%;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #tyler img {
+    width: 70%;
+  }
+}
+
+#ourteam #profiles #tyler h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -20px;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #tyler h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #tyler h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#ourteam #profiles #tyler h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1026px) {
+  #ourteam #profiles #tyler h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourteam #profiles #tyler h4 {
+    font-size: 1.2rem;
+  }
+}
+
+#about-freeconsultation {
+  background-image: url(/images/cranes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #about-freeconsultation {
+    height: 200px;
+  }
+}
+
+#about-freeconsultation h2 {
+  font-size: 1.3rem;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #about-freeconsultation h2 {
+    font-size: 2rem;
+    width: 50%;
+    padding-top: 7%;
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #about-freeconsultation h2 {
+    font-size: 2rem;
+    width: 60%;
+    padding-bottom: 6%;
+  }
+}
+
+#about-freeconsultation a {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #FBB040;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #about-freeconsultation a {
+    padding: 11px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #about-freeconsultation a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#buildingconstuction {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/images/san-diego.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  color: white;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #buildingconstuction {
+    height: 50vh;
+  }
+}
+
+#buildingconstuction h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  padding-top: 20%;
+  color: white;
+}
+
+@media (min-width: 1026px) {
+  #buildingconstuction h1 {
+    font-size: 3rem;
+    padding-bottom: 1%;
+    padding-top: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #buildingconstuction h1 {
+    padding-top: 10%;
+    font-size: 2.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+#buildingconstuction h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 20%;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #buildingconstuction h2 {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #buildingconstuction h2 {
+    padding-top: 5%;
+    font-size: 1.2rem;
+    padding-bottom: 10%;
+  }
+}
+
+#defectanalysis {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-bottom: 5%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #defectanalysis {
+    padding-bottom: 2%;
+  }
+}
+
+#defectanalysis h1 {
+  font-size: 2rem;
+  padding-top: 10%;
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #defectanalysis h1 {
+    padding-bottom: 2%;
+    padding-top: 4%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #defectanalysis h1 {
+    padding-top: 10%;
+    font-size: 2.5rem;
+  }
+}
+
+#defectanalysis h2 {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 10%;
+  color: black;
+}
+
+@media (min-width: 1026px) {
+  #defectanalysis h2 {
+    width: 80%;
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #defectanalysis h2 {
+    padding-bottom: 5%;
+    font-size: 1.2rem;
+  }
+}
+
+#process {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #E6E0D8;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #process {
+    padding-top: 0%;
+    padding-bottom: 5%;
+  }
+}
+
+#process #box1 {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #process #box1 {
+    text-align: left;
+    float: left;
+    width: 45%;
+    padding-left: 10%;
+  }
+}
+
+#process #box1 h1 {
+  font-size: 2rem;
+  padding-top: 10%;
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #process #box1 h1 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #process #box1 h1 {
+    padding-top: 5%;
+    font-size: 2.5rem;
+    padding-bottom: 2%;
+  }
+}
+
+#process #box1 h2 {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 5%;
+  color: black;
+}
+
+@media (min-width: 1026px) {
+  #process #box1 h2 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #process #box1 h2 {
+    font-size: 1.2rem;
+  }
+}
+
+#process #box1 ul {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 80%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #process #box1 ul {
+    padding-left: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #process #box1 ul {
+    font-size: 1.1rem;
+    width: 75%;
+  }
+}
+
+#process #box1 ul li {
+  display: inline-block;
+  margin: 0 auto;
+  display: list-item;
+  padding-bottom: 2%;
+}
+
+@media (min-width: 1026px) {
+  #process #box1 ul li {
+    padding-left: 1px;
+    padding-bottom: 1%;
+  }
+}
+
+#process #box1 a {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #FBB040;
+  padding: 10px 16px;
+}
+
+@media (min-width: 1026px) {
+  #process #box1 a {
+    padding: 14px 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #process #box1 a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#process img {
+  width: 90%;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #process img {
+    width: 35%;
+    padding-top: 5%;
+    padding-right: 9%;
+  }
+}
+
+#constructionservices {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-bottom: 10%;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #constructionservices {
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 1026px) {
+  #constructionservices #box2 {
+    text-align: left;
+    float: left;
+    width: 45%;
+    padding-left: 10%;
+  }
+}
+
+#constructionservices #box2 h1 {
+  font-size: 2rem;
+  padding-top: 10%;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #constructionservices #box2 h1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #constructionservices #box2 h1 {
+    font-size: 2.5rem;
+  }
+}
+
+#constructionservices #box2 ul {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 80%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #constructionservices #box2 ul {
+    padding-left: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #constructionservices #box2 ul {
+    font-size: 1.1rem;
+  }
+}
+
+#constructionservices #box2 ul li {
+  display: inline-block;
+  margin: 0 auto;
+  display: list-item;
+  padding-bottom: 2%;
+}
+
+@media (min-width: 1026px) {
+  #constructionservices #box2 ul li {
+    padding-left: 1px;
+    padding-bottom: 1%;
+  }
+}
+
+#constructionservices img {
+  width: 90%;
+}
+
+@media (min-width: 1026px) {
+  #constructionservices img {
+    width: 35%;
+    height: 100%;
+    padding-top: 5%;
+    padding-right: 9%;
+  }
+}
+
+#buildingconstruction-freeconsultation {
+  background-image: url(/images/cranes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #buildingconstruction-freeconsultation {
+    height: 150px;
+  }
+}
+
+#buildingconstruction-freeconsultation h2 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #buildingconstruction-freeconsultation h2 {
+    font-size: 2rem;
+    width: 50%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #buildingconstruction-freeconsultation h2 {
+    font-size: 2rem;
+    width: 70%;
+    padding-bottom: 6%;
+  }
+}
+
+#buildingconstruction-freeconsultation a {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #FBB040;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #buildingconstruction-freeconsultation a {
+    padding: 11px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #buildingconstruction-freeconsultation a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#insuranceclaims {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/images/san-diego.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  color: white;
+  height: auto;
+}
+
+@media (min-width: 1026px) {
+  #insuranceclaims {
+    height: 50vh;
+  }
+}
+
+#insuranceclaims h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  padding-top: 20%;
+  color: white;
+}
+
+@media (min-width: 1026px) {
+  #insuranceclaims h1 {
+    font-size: 3rem;
+    padding-bottom: 1%;
+    padding-top: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #insuranceclaims h1 {
+    font-size: 2.5rem;
+    padding-top: 10%;
+  }
+}
+
+#insuranceclaims h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 20%;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #insuranceclaims h2 {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #insuranceclaims h2 {
+    font-size: 1.2rem;
+    padding-top: 3%;
+    padding-bottom: 10%;
+  }
+}
+
+#claimslist {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-bottom: 10%;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #claimslist {
+    padding-top: 0%;
+    padding-bottom: 1%;
+  }
+}
+
+#claimslist #box {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #claimslist #box {
+    text-align: left;
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+  }
+}
+
+#claimslist #box h1 {
+  font-size: 1.5rem;
+  padding-top: 8%;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #claimslist #box h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimslist #box h1 {
+    font-size: 2rem;
+  }
+}
+
+#claimslist #box h3 {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 10%;
+  color: black;
+}
+
+@media (min-width: 1026px) {
+  #claimslist #box h3 {
+    margin-left: 0;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimslist #box h3 {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+
+#claimslist #box ul {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 80%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #claimslist #box ul {
+    padding-left: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimslist #box ul {
+    font-size: 1.1rem;
+    padding-left: 10%;
+  }
+}
+
+#claimslist #box ul li {
+  display: inline-block;
+  margin: 0 auto;
+  display: list-item;
+  padding-bottom: 2%;
+}
+
+@media (min-width: 1026px) {
+  #claimslist #box ul li {
+    padding-left: 1px;
+    padding-bottom: 1%;
+  }
+}
+
+#claimslist img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #claimslist img {
+    width: 28%;
+    padding-top: 5%;
+    padding-right: 10%;
+  }
+}
+
+#claimtype {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: black;
+  background-color: #E6E0D8;
+  padding-bottom: 15%;
+}
+
+@media (min-width: 1026px) {
+  #claimtype {
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimtype {
+    height: 500px;
+  }
+}
+
+#claimtype h1 {
+  font-size: 1.5rem;
+  padding-top: 10%;
+  margin: 0 auto;
+  width: 85%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #claimtype h1 {
+    font-size: 2rem;
+    padding-top: 5%;
+    padding-bottom: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimtype h1 {
+    font-size: 2rem;
+  }
+}
+
+#claimtype h2 {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #claimtype h2 {
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimtype h2 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#claimtype a {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #FBB040;
+  padding: 12px 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #claimtype {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#insuranceconsultation {
+  background-image: url(/images/cranes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 12%;
+}
+
+@media (min-width: 1026px) {
+  #insuranceconsultation {
+    height: 200px;
+  }
+}
+
+#insuranceconsultation h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-top: 8%;
+}
+
+@media (min-width: 1026px) {
+  #insuranceconsultation h3 {
+    font-size: 1rem;
+    padding-bottom: 1px;
+    padding-top: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #insuranceconsultation h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#insuranceconsultation h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding-top: 2%;
+  padding-bottom: 10%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #insuranceconsultation h2 {
+    font-size: 2rem;
+    width: 40%;
+    padding-top: 15px;
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #insuranceconsultation h2 {
+    font-size: 2rem;
+    width: 70%;
+    padding-bottom: 6%;
+  }
+}
+
+#insuranceconsultation a {
+  font-weight: 500;
+  text-decoration: none;
+  border-style: 20px solid;
+  color: white;
+  background-color: #FBB040;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #insuranceconsultation a {
+    padding: 11px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #insuranceconsultation a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#dispute {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/images/san-diego.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  color: white;
+  height: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #dispute {
+    height: 50vh;
+  }
+}
+
+#dispute h1 {
+  font-size: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 800;
+  padding-top: 20%;
+  color: white;
+}
+
+@media (min-width: 1026px) {
+  #dispute h1 {
+    font-size: 3rem;
+    padding-bottom: 1%;
+    padding-top: 8%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #dispute h1 {
+    font-size: 2.5rem;
+    padding-top: 10%;
+  }
+}
+
+#dispute h2 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 20%;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #dispute h2 {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #dispute h2 {
+    font-size: 1.2rem;
+    padding-top: 3%;
+    padding-bottom: 10%;
+  }
+}
+
+#disputeprocess {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-bottom: 10%;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess {
+    padding-top: 0%;
+    padding-bottom: 1%;
+  }
+}
+
+#disputeprocess #box {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box {
+    text-align: left;
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+    padding-bottom: 4%;
+  }
+}
+
+#disputeprocess #box h1 {
+  font-size: 1.5rem;
+  padding-top: 8%;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeprocess #box h1 {
+    font-size: 2rem;
+  }
+}
+
+#disputeprocess #box h2 {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 10%;
+  color: black;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box h2 {
+    margin-left: 0;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeprocess #box h2 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#disputeprocess #box ul {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 80%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box ul {
+    padding-left: 3%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeprocess #box ul {
+    font-size: 1.1rem;
+  }
+}
+
+#disputeprocess #box ul li {
+  display: inline-block;
+  margin: 0 auto;
+  display: list-item;
+  padding-bottom: 2%;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box ul li {
+    padding-left: 1px;
+    padding-bottom: 1%;
+  }
+}
+
+#disputeprocess #box #help {
+  font-size: .9rem;
+  width: 70%;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box #help {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeprocess #box #help {
+    font-size: 1.1rem;
+  }
+}
+
+#disputeprocess #box a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: #FBB040;
+  border: transparent;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess #box a {
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeprocess #box a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#disputeprocess img {
+  width: 90%;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #disputeprocess img {
+    width: 30%;
+    padding-top: 4.5%;
+    padding-right: 10%;
+  }
+}
+
+#litigationsupport {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-bottom: 10%;
+  background-color: #305A6B;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport {
+    padding-bottom: 5%;
+  }
+}
+
+#litigationsupport #box {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport #box {
+    text-align: left;
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+  }
+}
+
+#litigationsupport #box h1 {
+  font-size: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 800;
+  padding-top: 10%;
+  color: white;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport #box h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #litigationsupport #box h1 {
+    font-size: 2rem;
+  }
+}
+
+#litigationsupport #box ul {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  width: 80%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+  padding-bottom: 10%;
+  color: white;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport #box ul {
+    padding-left: 3%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #litigationsupport #box ul {
+    font-size: 1.1rem;
+  }
+}
+
+#litigationsupport #box ul li {
+  display: inline-block;
+  margin: 0 auto;
+  display: list-item;
+  padding-bottom: 2%;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport #box ul li {
+    padding-left: 1px;
+    padding-bottom: 1%;
+  }
+}
+
+#litigationsupport #box a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: #FBB040;
+  border: transparent;
+  padding: 12px 15px;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport #box a {
+    margin-left: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #litigationsupport #box a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#litigationsupport img {
+  width: 90%;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #litigationsupport img {
+    width: 30%;
+    padding-top: 5%;
+    padding-right: 10%;
+  }
+}
+
+#disputeconsultation {
+  background-image: url(/images/cranes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 12%;
+}
+
+@media (min-width: 1026px) {
+  #disputeconsultation {
+    height: 150px;
+  }
+}
+
+#disputeconsultation h3 {
+  font-size: .8rem;
+  font-weight: 500;
+  padding-top: 8%;
+}
+
+@media (min-width: 1026px) {
+  #disputeconsultation h3 {
+    font-size: 1rem;
+    padding-bottom: 1px;
+    padding-top: 4%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeconsultation h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#disputeconsultation h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding-top: 2%;
+  padding-bottom: 10%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #disputeconsultation h2 {
+    font-size: 2rem;
+    width: 40%;
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeconsultation h2 {
+    font-size: 2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#disputeconsultation a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: #FBB040;
+  border: transparent;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #disputeconsultation a {
+    padding: 11px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #disputeconsultation a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#maincontact {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #305A6B;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 1026px) {
+  #maincontact {
+    background-color: white;
+  }
+}
+
+#maincontact #info {
+  padding-top: 15%;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #maincontact #info {
+    background-color: white;
+    text-align: left;
+    float: left;
+    width: 25%;
+    padding-left: 14%;
+    padding-top: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #maincontact #info {
+    padding-top: 10%;
+  }
+}
+
+#maincontact #info h2 {
+  font-size: 1.8rem;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #maincontact #info h2 {
+    color: black;
+    margin-left: 0;
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #maincontact #info h2 {
+    font-size: 2.5rem;
+  }
+}
+
+#maincontact #info h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 10%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #maincontact #info h3 {
+    color: black;
+    margin-left: 0;
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #maincontact #info h3 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#contactinputs {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs {
+    background-color: white;
+    margin-left: 5%;
+    text-align: left;
+    float: left;
+    width: 45%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+  }
+}
+
+#contactinputs h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: black;
+  padding-top: 15%;
+  padding-bottom: 5%;
+  color: #305A6B;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs h1 {
+    color: #FBB040;
+    margin-left: 0;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contactinputs h1 {
+    font-size: 2.5rem;
+    padding-top: 10%;
+  }
+}
+
+#contactinputs form {
+  -webkit-transition: all 4s ease-in-out;
+  transition: all 4s ease-in-out;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs form {
+    margin-left: 0;
+    padding-top: 0%;
+    text-align: left;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+#contactinputs form .inputs1 {
+  display: block;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 1px solid #E6E0D8;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  margin-top: 3%;
+  padding-left: 2%;
+  width: 90%;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs form .inputs1 {
+    text-align: left;
+    float: left;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contactinputs form .inputs1 {
+    font-size: 1.2rem;
+  }
+}
+
+#contactinputs form .inputs2 {
+  display: block;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 1px solid #E6E0D8;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  margin-top: 3%;
+  padding-left: 2%;
+  width: 90%;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs form .inputs2 {
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: inline-block;
+    width: 40%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+
+#contactinputs form .inputs3 {
+  display: block;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 1px solid #E6E0D8;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  margin-top: 3%;
+  padding-left: 2%;
+  width: 90%;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs form .inputs3 {
+    display: inline-block;
+    text-align: left;
+    margin-left: 7%;
+    width: 40%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contactinputs form .inputs3 {
+    font-size: 1.2rem;
+  }
+}
+
+#contactinputs form .inputs4 {
+  display: block;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 1px solid #E6E0D8;
+  padding-bottom: 1%;
+  max-height: 100px;
+  padding-top: 4%;
+  margin-top: 3%;
+  margin-bottom: 8%;
+  width: 90%;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs form .inputs4 {
+    float: left;
+    padding-left: 2%;
+    padding-top: 1%;
+    text-align: left;
+    padding-bottom: 1%;
+    resize: vertical;
+    min-height: 20px;
+    max-height: 25px;
+    margin-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contactinputs form .inputs4 {
+    font-size: 1.2rem;
+  }
+}
+
+#contactinputs form ::-webkit-input-placeholder {
+  color: black;
+}
+
+#contactinputs form :-ms-input-placeholder {
+  color: black;
+}
+
+#contactinputs form ::-ms-input-placeholder {
+  color: black;
+}
+
+#contactinputs form ::placeholder {
+  color: black;
+}
+
+#contactinputs form .submit {
+  display: block;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  background-color: #FBB040;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #contactinputs form .submit {
+    float: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contactinputs form .submit {
+    padding: 15px 50px;
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+  }
+}
+
+#map {
+  margin-top: 2%;
+  background-color: white;
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 1026px) {
+  #map {
+    display: inline-block;
+    height: 500px;
+    width: 75%;
+  }
+}
+
+#icons {
+  margin: 0 auto;
+  padding-bottom: 15%;
+  padding-top: 15%;
+}
+
+@media (min-width: 1026px) {
+  #icons {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #icons {
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+}
+
+#icons #location {
+  border: 2px solid white;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 8%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+@media (min-width: 1026px) {
+  #icons #location {
+    display: inline-block;
+    padding: 25px 10px;
+    border: 2px solid black;
+    width: 20%;
+    margin-bottom: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #icons #location {
+    margin-bottom: 5%;
+  }
+}
+
+#icons #location i {
+  display: inline-block;
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+@media (min-width: 1026px) {
+  #icons #location i {
+    color: black;
+  }
+}
+
+#icons #location h2 {
+  display: inline-block;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-right: 5px;
+}
+
+@media (min-width: 1026px) {
+  #icons #location h2 {
+    color: black;
+  }
+}
+
+#icons #location h3 {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (min-width: 1026px) {
+  #icons #location h3 {
+    color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #icons #location h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#icons #call {
+  border: 2px solid white;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 8%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+@media (min-width: 1026px) {
+  #icons #call {
+    display: inline-block;
+    padding: 25px 5px;
+    border: 2px solid black;
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #icons #call {
+    margin-bottom: 5%;
+  }
+}
+
+#icons #call i {
+  display: inline-block;
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+@media (min-width: 1026px) {
+  #icons #call i {
+    color: black;
+  }
+}
+
+#icons #call h2 {
+  display: inline-block;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-right: 5px;
+}
+
+@media (min-width: 1026px) {
+  #icons #call h2 {
+    color: black;
+  }
+}
+
+#icons #call h3 {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (min-width: 1026px) {
+  #icons #call h3 {
+    color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #icons #call h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#icons #email {
+  border: 2px solid white;
+  padding: 7px 10px;
+  width: 80%;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  margin-bottom: 0%;
+}
+
+@media (min-width: 1026px) {
+  #icons #email {
+    padding: 25px 10px;
+    display: inline-block;
+    border: 2px solid black;
+    width: 20%;
+  }
+}
+
+#icons #email i {
+  display: inline-block;
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+@media (min-width: 1026px) {
+  #icons #email i {
+    color: black;
+  }
+}
+
+#icons #email h2 {
+  display: inline-block;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-right: 5px;
+}
+
+@media (min-width: 1026px) {
+  #icons #email h2 {
+    color: black;
+  }
+}
+
+#icons #email h3 {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (min-width: 1026px) {
+  #icons #email h3 {
+    color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #icons #email h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#sandiego {
+  background-image: url(/images/sandiego.jpg);
+  font-family: 'Montserrat', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+}
+
+@media (min-width: 1026px) {
+  #sandiego {
+    height: 30vh;
+    margin-bottom: 5%;
+  }
+}
+
+#sandiego h1 {
+  font-size: 2rem;
+  padding-top: 13%;
+  color: white;
+}
+
+@media (min-width: 1026px) {
+  #sandiego h1 {
+    padding-top: 6%;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sandiego h1 {
+    font-size: 2.5rem;
+    padding-top: 9%;
+  }
+}
+
+#sandiegoconsulting {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsulting {
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+#sandiegoconsulting #consulting {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsulting #consulting {
+    text-align: left;
+    float: left;
+    width: 40%;
+    padding-left: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sandiegoconsulting #consulting {
+    padding-bottom: 6%;
+  }
+}
+
+#sandiegoconsulting #consulting h1 {
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsulting #consulting h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    padding-bottom: 2%;
+    padding-top: 0%;
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sandiegoconsulting #consulting h1 {
+    font-size: 2.5rem;
+    width: 60%;
+    padding-top: 5%;
+  }
+}
+
+#sandiegoconsulting #consulting h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsulting #consulting h3 {
+    margin-left: 0;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    width: 65%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sandiegoconsulting #consulting h3 {
+    font-size: 1.2rem;
+    width: 80%;
+    padding-bottom: 1%;
+  }
+}
+
+#sandiegoconsulting #map2 {
+  margin-top: 2%;
+  background-color: white;
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsulting #map2 {
+    width: 39%;
+    height: 300px;
+    padding-top: 5%;
+    margin-right: 21%;
+  }
+}
+
+#sandiegoconsultation {
+  background-image: url(/images/cranes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsultation {
+    height: 200px;
+    margin-top: 5%;
+  }
+}
+
+#sandiegoconsultation h1 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsultation h1 {
+    font-size: 2rem;
+    width: 40%;
+    padding-bottom: 3%;
+    padding-top: 6%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sandiegoconsultation h1 {
+    font-size: 2rem;
+    width: 65%;
+    padding-bottom: 6%;
+  }
+}
+
+#sandiegoconsultation a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: #FBB040;
+  border: transparent;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #sandiegoconsultation a {
+    padding: 11px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #sandiegoconsultation a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#ourprojects {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #305A6B;
+  color: white;
+  overflow: hidden;
+}
+
+#ourprojects h1 {
+  padding-top: 10%;
+  font-size: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #ourprojects h1 {
+    font-size: 3rem;
+    padding-top: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourprojects h1 {
+    font-size: 2.5rem;
+  }
+}
+
+#ourprojects h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #ourprojects h3 {
+    width: 70%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ourprojects h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#projects {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 15%;
+}
+
+@media (min-width: 1026px) {
+  #projects {
+    display: block;
+    padding-bottom: 8%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#projects #project1 {
+  text-align: center;
+  padding-top: 15%;
+}
+
+@media (min-width: 1026px) {
+  #projects #project1 {
+    display: inline-block;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 25%;
+    height: 300px;
+    vertical-align: top;
+    padding-left: 12.5%;
+  }
+}
+
+#projects #project1 img {
+  width: 85%;
+}
+
+#projects #project1 h2 {
+  font-size: 1.5rem;
+  padding-top: 2%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project1 h2 {
+    font-size: 2rem;
+  }
+}
+
+#projects #project1 h3 {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 400;
+  padding-bottom: 7%;
+  padding-top: .5%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project1 h3 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#projects #project1 a {
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #305A6B;
+  color: white;
+  padding: 9px 14px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project1 a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#projects #project2 {
+  text-align: center;
+  padding-top: 15%;
+}
+
+@media (min-width: 1026px) {
+  #projects #project2 {
+    display: inline-block;
+    padding-top: 5%;
+    width: 25%;
+    height: 300px;
+    vertical-align: top;
+  }
+}
+
+#projects #project2 img {
+  width: 85%;
+}
+
+#projects #project2 h2 {
+  font-size: 1.5rem;
+  padding-top: 2%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project2 h2 {
+    font-size: 2rem;
+  }
+}
+
+#projects #project2 h3 {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 400;
+  padding-bottom: 7%;
+  padding-top: .5%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project2 h3 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#projects #project2 a {
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #305A6B;
+  color: white;
+  padding: 9px 14px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project2 a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#projects #project3 {
+  text-align: center;
+  padding-top: 15%;
+}
+
+@media (min-width: 1026px) {
+  #projects #project3 {
+    display: inline-block;
+    padding-top: 5%;
+    width: 25%;
+    height: 300px;
+    vertical-align: top;
+  }
+}
+
+#projects #project3 img {
+  width: 85%;
+}
+
+#projects #project3 h2 {
+  font-size: 1.5rem;
+  padding-top: 2%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project3 h2 {
+    font-size: 2rem;
+  }
+}
+
+#projects #project3 h3 {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 400;
+  padding-bottom: 7%;
+  padding-top: .5%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project3 h3 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#projects #project3 a {
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #305A6B;
+  color: white;
+  padding: 9px 14px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project3 a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#projects #project4 {
+  text-align: center;
+  padding-top: 15%;
+}
+
+@media (min-width: 1026px) {
+  #projects #project4 {
+    display: inline-block;
+    width: 25%;
+    padding-top: 5%;
+    height: 300px;
+    padding-left: 12.5%;
+  }
+}
+
+#projects #project4 img {
+  width: 85%;
+}
+
+#projects #project4 h2 {
+  font-size: 1.5rem;
+  padding-top: 2%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project4 h2 {
+    font-size: 2rem;
+  }
+}
+
+#projects #project4 h3 {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 400;
+  padding-bottom: 7%;
+  padding-top: .5%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project4 h3 {
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+
+#projects #project4 a {
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #305A6B;
+  color: white;
+  padding: 9px 14px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects #project4 a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#moreinfo {
+  background-image: url(/images/cranes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 12%;
+}
+
+@media (min-width: 1026px) {
+  #moreinfo {
+    height: 150px;
+  }
+}
+
+#moreinfo h3 {
+  font-size: .8rem;
+  font-weight: 500;
+  padding-top: 8%;
+}
+
+@media (min-width: 1026px) {
+  #moreinfo h3 {
+    font-size: 1rem;
+    padding-bottom: 0px;
+    padding-top: 4%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #moreinfo h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#moreinfo h1 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding-top: 2%;
+  padding-bottom: 10%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #moreinfo h1 {
+    font-size: 2rem;
+    width: 40%;
+    padding-bottom: 3%;
+    padding-top: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #moreinfo h1 {
+    font-size: 2rem;
+    width: 65%;
+    padding-bottom: 5%;
+  }
+}
+
+#moreinfo a {
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid white;
+  color: white;
+  padding: 7px 15px;
+}
+
+@media (min-width: 1026px) {
+  #moreinfo a {
+    border: 3px solid white;
+    padding: 11px 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #moreinfo a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#project-main {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  background-color: white;
+  /* Parent wrapper to carousel. Width can be changed as needed. */
+  /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+  /* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+  /* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+  /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+  /* Set 'z-index' to sit behind our '.active' item. */
+  /* Translate previous item to the left */
+  /* Translate next item to the right */
+  /* Style navigation buttons to sit in the middle, either side of the carousel. */
+  /* Use pseudo elements to insert arrows inside of navigation buttons */
+}
+
+@media (min-width: 1026px) {
+  #project-main {
+    color: black;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+    overflow: hidden;
+  }
+}
+
+#project-main h1 {
+  font-size: 1.8rem;
+  padding-top: 10%;
+  width: 85%;
+  margin: 0 auto;
+  color: #305A6B;
+}
+
+@media (min-width: 1026px) {
+  #project-main h1 {
+    font-size: 3rem;
+    padding-top: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main h1 {
+    font-size: 2.5rem;
+    width: 50%;
+  }
+}
+
+#project-main #issue {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #project-main #issue {
+    text-align: left;
+    float: left;
+    padding-left: 12%;
+    padding-top: 2%;
+    width: 35%;
+  }
+}
+
+#project-main #issue h2 {
+  font-size: 1.2rem;
+  padding-top: 5%;
+  color: #305A6B;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1026px) {
+  #project-main #issue h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main #issue h2 {
+    font-size: 2rem;
+  }
+}
+
+#project-main #issue h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 1%;
+  color: black;
+}
+
+@media (min-width: 1026px) {
+  #project-main #issue h3 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main #issue h3 {
+    font-size: 1.2rem;
+    padding-bottom: 3%;
+  }
+}
+
+#project-main #resolution {
+  display: inline-block;
+}
+
+@media (min-width: 1026px) {
+  #project-main #resolution {
+    text-align: left;
+    float: left;
+    padding-left: 12%;
+    width: 35%;
+    clear: both;
+  }
+}
+
+#project-main #resolution h2 {
+  font-size: 1.2rem;
+  padding-top: 5%;
+  color: #305A6B;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1026px) {
+  #project-main #resolution h2 {
+    padding-top: 5.5%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main #resolution h2 {
+    font-size: 2rem;
+    padding-top: 3%;
+  }
+}
+
+#project-main #resolution h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 1%;
+  color: black;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #project-main #resolution h3 {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main #resolution h3 {
+    font-size: 1.2rem;
+  }
+}
+
+#project-main #resolution ul {
+  display: inline-block;
+  text-align: left;
+  color: black;
+  width: 80%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+@media (min-width: 1026px) {
+  #project-main #resolution ul {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 3%;
+    padding-bottom: 1%;
+  }
+}
+
+#project-main #resolution ul li {
+  font-size: 1rem;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #project-main #resolution ul li {
+    font-size: 1rem;
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main #resolution ul li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 2301px) {
+  #project-main #resolution #space {
+    height: 200px;
+    background-color: transparent;
+  }
+}
+
+#project-main .carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: white;
+}
+
+@media (min-width: 1026px) {
+  #project-main .carousel-wrapper {
+    width: 40%;
+    position: absolute;
+    display: inline-block;
+    float: right;
+    padding-top: 3%;
+    padding-right: 10%;
+    right: 0;
+    padding-bottom: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main .carousel-wrapper {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+#project-main .carousel-wrapper * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#project-main .carousel {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+#project-main .carousel__photo {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  z-index: 100;
+  -webkit-transition: opacity .5s, z-index .5s, -webkit-transform .5s;
+  transition: opacity .5s, z-index .5s, -webkit-transform .5s;
+  transition: transform .5s, opacity .5s, z-index .5s;
+  transition: transform .5s, opacity .5s, z-index .5s, -webkit-transform .5s;
+}
+
+@media (min-width: 1026px) {
+  #project-main .carousel__photo {
+    padding: 1rem 4rem;
+  }
+}
+
+#project-main .carousel__photo.initial,
+#project-main .carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+#project-main .carousel__photo.prev,
+#project-main .carousel__photo.next {
+  z-index: 800;
+}
+
+#project-main .carousel__photo.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+#project-main .carousel__photo.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#project-main .carousel__button--prev,
+#project-main .carousel__button--next {
+  position: absolute;
+  top: 50%;
+  margin-left: 8%;
+  margin-right: 8%;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  /* Sit on top of everything */
+  border: 1px solid black;
+  /*  opacity: 0;  Hide buttons until carousel is initialised 
+  transition:opacity 1s;*/
+}
+
+@media (min-width: 1026px) {
+  #project-main .carousel__button--prev,
+  #project-main .carousel__button--next {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-main .carousel__button--prev,
+  #project-main .carousel__button--next {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+#project-main .carousel__button--prev {
+  left: 0;
+}
+
+#project-main .carousel__button--next {
+  right: 0;
+}
+
+#project-main .carousel__button--prev::after,
+#project-main .carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+#project-main .carousel__button--next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.thanks-container {
+  background-color: #305A6B;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.thanks-container .thanks {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .thanks-container .thanks {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1026px) {
+  .thanks-container .thanks {
+    font-size: 2.5rem;
+    padding-top: 12%;
+  }
+}
+
+.thanks-container .received {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .thanks-container .received {
+    font-size: 1.2rem;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (min-width: 1026px) {
+  .thanks-container .received {
+    font-size: 1.2rem;
+    padding-top: 1%;
+    padding-bottom: 3%;
+  }
+}
+
+.thanks-container .returnbtn {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  padding-bottom: 25%;
+}
+
+@media (min-width: 1026px) {
+  .thanks-container .returnbtn {
+    padding-bottom: 15%;
+  }
+}
+
+.thanks-container .returnbtn a {
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .thanks-container .returnbtn a {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+  }
+}
+
+#footer {
+  display: block;
+  background-color: #828280;
+  font-size: .8rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 5%;
+}
+
+@media (min-width: 1026px) {
+  #footer {
+    display: block;
+    text-align: left;
+    padding-top: 1%;
+    padding-bottom: .1px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer {
+    padding-top: 2%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+#footer #footerbulk {
+  margin-bottom: 6%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footerbulk {
+    margin-bottom: 0;
+  }
+}
+
+#footer #footermain {
+  display: block;
+}
+
+@media (min-width: 1026px) {
+  #footer #footermain {
+    display: inline-block;
+    float: left;
+    text-align: left;
+    width: 35%;
+    padding-left: 8%;
+  }
+}
+
+#footer #footermain h2 {
+  padding-top: 5.5%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footermain h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footermain h4 {
+    font-size: 1.2rem;
+    width: 70%;
+  }
+}
+
+#footer #footerservices {
+  display: block;
+}
+
+@media (min-width: 1026px) {
+  #footer #footerservices {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+    width: 25%;
+    margin-left: 1%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footerservices h2 {
+    font-size: 2rem;
+  }
+}
+
+#footer #footerservices ul {
+  display: inline-block;
+  list-style: none;
+}
+
+@media (min-width: 1026px) {
+  #footer #footerservices ul {
+    padding-left: 10%;
+  }
+}
+
+#footer #footerservices ul li {
+  padding-bottom: 1px;
+}
+
+#footer #footerservices ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer #footerservices ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+#footer #contactfooter {
+  display: block;
+}
+
+@media (min-width: 1026px) {
+  #footer #contactfooter {
+    display: inline-block;
+    float: right;
+    width: 25%;
+    margin-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+#footer h2 {
+  font-weight: 800;
+  color: white;
+  padding-top: 8%;
+  padding-bottom: 1%;
+}
+
+@media (min-width: 1026px) {
+  #footer h2 {
+    padding-left: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer h2 {
+    font-size: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+#footer h4 {
+  color: white;
+  font-weight: 400;
+  font-size: .8rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer h4 {
+    font-size: 1.2rem;
+  }
+}
+
+#footer #footspace {
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1026px) {
+  #footer #footspace {
+    padding-bottom: 1px;
+  }
+}
+
+#footer .copybar {
+  position: absolute;
+  background-color: #595959;
+  width: 100%;
+}
+
+@media (min-width: 1026px) {
+  #footer .copybar {
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+  }
+}
+
+#footer .copybar h4 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1026px) {
+  #footer .copybar h4 {
+    display: block;
+    position: absolute;
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #footer .copybar h4 {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

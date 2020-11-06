@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b7065efa59.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Services - Building Construction Consulting</title>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="/images/avail-logo.png" alt="">
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <label for="btn-1" class="show">Services</label>
+                <a href="#">Services</a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="buildingconstruction.html">Building Construction Consulting</a></li>
+                    <li><a href="claims.html">Property Insurance Claims Consulting</a></li>
+                    <li><a href="resolution.html">Dispute Resolution & Litigation Support</a></li>
+                </ul>
+            </li>
+            <li><a href="location.html">Locations</a></li>
+            <li><a href="featuredprojects.html">Featured Projects</a>
+            <li><a href="contact.html">Contact</a>
+        </ul>
+    </nav>
+
+<div id="sandiego">
+    <h1>San Diego</h1>
+</div>
+
+<div id="sandiegoconsulting">
+    <div id="consulting">
+        <h1>Construction Consulting in San Diego</h1>
+    <h3>ACC has provided construction consulting services in Florida for over 15 years. We stay at the forefront of the construction industry by keeping up with the latest building science techniques, current building codes and local construction industry standards. Utilizing state of the art technology, such as drone and infrared photography and minute to minute environmental monitoring, FCC is able to diagnose and recommend repairs for the most complex construction defects and installation failures.</h3>
+    <h3>We assist in conducting on-site informative meetings with all relevant parties to discuss the building performance complaints. Avail Construction Consulting is well versed in the various ASTM standards for evidence preservation and reporting.</h3>
+    </div>
+    <div id="map2">
+        <p><a href="https://www.maptiler.com/copyright/" target="_blank"></a> <a href="https://www.openstreetmap.org/copyright" target="_blank"></a></p>
+        <script>
+          var map = L.map('map2').setView([32.709691, -117.157121], 14);
+          var gl = L.mapboxGL({
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+            style: 'https://api.maptiler.com/maps/streets/style.json?key=6uRofWMIxqNf3PaxLxxr'
+          }).addTo(map);
+          var marker = L.marker([32.709691, -117.157121]).addTo(map);
+        </script>
+    </div>
+</div>
+
+<div id="sandiegoconsultation">
+    <h1>Need insight on how to navigate your specific building issues in San Diego?</h1>
+    <a id="trans-btn" href="contact.html">Free Initial Consultation</a>
+</div>
+</div>
+
+<div id="footer">
+    <div id="footerbulk">
+    <div id="footermain">
+        <h2>Avail</h2>
+        <h4>Avail Construction Consulting (ACC) provides our clients with critical support to resolve their building performance complaints. Our services include building envelope analysis, building code violation reporting, repair work protocols with specified building materials, property insurance claims review, litigation support – if required and more.</h4>
+    </div>
+    <div id="footerservices">
+        <h2>Our Services</h2>
+        <ul>
+            <li><a href="buildingconstruction.html">- Building Construction Consulting</a></li>
+            <li><a href="claims.html">- Property Insurance Claims Consulting</a></li>
+            <li><a href="resolution.html">- Dispute Resolution & Litigation Support</a></li>
+        </ul>
+    </div>
+    <div id="contactfooter">
+        <h2>Contact Us</h2>
+        <h4>Visit Us: 8990 Summit Ln, San Diego, CA 92122</h4>
+        <h4>Call Us: (858) 453-3502</h4>
+        <h4 id="footspace">Email Us: info@accteam.com</h4>
+    </div>
+</div>
+    <div class="copybar">
+        <h4 id="copy">© Avail Construction Consulting, LLC</h4>
+    </div>
+</div>
+
+<script src="avail-btn.js"></script>
+<script src="avail.js"></script>
+
+</body>
+</html>

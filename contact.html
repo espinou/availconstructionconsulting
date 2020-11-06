@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b7065efa59.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Services - Building Construction Consulting</title>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="/images/avail-logo.png" alt="">
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <label for="btn-1" class="show">Services</label>
+                <a href="#">Services</a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="buildingconstruction.html">Building Construction Consulting</a></li>
+                    <li><a href="claims.html">Property Insurance Claims Consulting</a></li>
+                    <li><a href="resolution.html">Dispute Resolution & Litigation Support</a></li>
+                </ul>
+            </li>
+            <li><a href="location.html">Locations</a></li>
+            <li><a href="featuredprojects.html">Featured Projects</a>
+            <li><a href="contact.html">Contact</a>
+        </ul>
+    </nav>
+
+<div id="maincontact">
+    <div id="info">
+        <h2>Free Initial Consultation</h2>
+        <h3>Are you ready to get started? Contact us for more information regarding our construction consulting services. We are here to help you! Simply fill out the contact form and we will be in touch as soon as possible.</h3>
+        <h3>If your matter is urgent, give us a call now for your free initial over-the-phone consultation.</h3>
+        <h3>We assist in conducting on-site informative meetings with all relevant parties to discuss the building performance complaints. Avail Construction Consulting is well versed in the various ASTM standards for evidence preservation and reporting.</h3>
+    </div>
+
+    <div id="contactinputs">
+        <h1>Contact Us</h1>
+        <form action="contact.php" method="post" action="contact.php">
+            <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+            <input class="inputs1" type="text" name="name" placeholder="name">
+            <input class="inputs2" type="email" name="email" placeholder="email">
+            <input class="inputs3" type="phone" name="phone" placeholder="phone number">
+            <textarea class="inputs4" name="message" id="textarea"  placeholder="message"></textarea>
+            <button type="submit" class="submit" name="submit" value="Send Form">Submit</button>
+        </form>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script>
+        const constraints = {
+            name: {
+                presence: { allowEmpty: false }
+            },
+            email: {
+                presence: { allowEmpty: false },
+                email: true
+            },
+            message: {
+                presence: { allowEmpty: false }
+            }
+        };
+  
+        const form = document.getElementById('contact-form');
+  
+        form.addEventListener('submit', function (event) {
+            const formValues = {
+                name: form.elements.name.value,
+                email: form.elements.email.value,
+                message: form.elements.message.value
+            };
+  
+            const errors = validate(formValues, constraints);
+  
+            if (errors) {
+                event.preventDefault();
+                const errorMessage = Object
+                    .values(errors)
+                    .map(function (fieldValues) {
+                        return fieldValues.join(', ')
+                    })
+                    .join("\n");
+  
+                alert(errorMessage);
+            }
+        }, false);
+    </script>
+    </div>
+
+    <div id="map"></div>
+    <p><a href="https://www.maptiler.com/copyright/" target="_blank"></a> <a href="https://www.openstreetmap.org/copyright" target="_blank"></a></p>
+    <script>
+      var map = L.map('map').setView([32.709691, -117.157121], 14);
+      var gl = L.mapboxGL({
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=6uRofWMIxqNf3PaxLxxr'
+      }).addTo(map);
+      var marker = L.marker([32.709691, -117.157121]).addTo(map);
+    </script>
+
+    <div id="icons">
+        <div id="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <h2>Location:</h2>
+            <h3>808 J St</h3>
+        </div>
+        <div id="call">
+            <i class="fas fa-phone"></i>
+            <h2>Call:</h2>
+            <h3>(858) 453-3502</h3>
+        </div>
+        <div id="email">
+            <i class="fas fa-envelope"></i>
+            <h2>email:</h2>
+            <h3>info@acc.com</h3>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div id="footerbulk">
+    <div id="footermain">
+        <h2>Avail</h2>
+        <h4>Avail Construction Consulting (ACC) provides our clients with critical support to resolve their building performance complaints. Our services include building envelope analysis, building code violation reporting, repair work protocols with specified building materials, property insurance claims review, litigation support – if required and more.</h4>
+    </div>
+    <div id="footerservices">
+        <h2>Our Services</h2>
+        <ul>
+            <li><a href="buildingconstruction.html">- Building Construction Consulting</a></li>
+            <li><a href="claims.html">- Property Insurance Claims Consulting</a></li>
+            <li><a href="resolution.html">- Dispute Resolution & Litigation Support</a></li>
+        </ul>
+    </div>
+    <div id="contactfooter">
+        <h2>Contact Us</h2>
+        <h4>Visit Us: 8990 Summit Ln, San Diego, CA 92122</h4>
+        <h4>Call Us: (858) 453-3502</h4>
+        <h4 id="footspace">Email Us: info@accteam.com</h4>
+    </div>
+</div>
+    <div class="copybar">
+        <h4 id="copy">© Avail Construction Consulting, LLC</h4>
+    </div>
+</div>
+
+<script src="avail-btn.js"></script>
+<script src="avail.js"></script>
+
+</body>
+</html>
